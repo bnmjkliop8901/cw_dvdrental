@@ -31,3 +31,6 @@
 16 - SELECT SUM(rental_rate) , DATE_PART('dow' , last_update) as day_of_the_week FROM film GROUP BY day_of_the_week;
 
 17 - SELECT * , UPPER(city) , LOWER(city) FROM city;
+
+18 - SELECT address , LEFT(address , POSITION(' ' IN address)-1) as street_number FROM address;
+
