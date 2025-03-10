@@ -1,1 +1,33 @@
-123
+1 -  SELECT first_name , last_name FROM actor WHERE first_name LIKE 'Nick' OR first_name LIKE 'Ed' OR first_name LIKE 'Jennifer';
+
+2 - last_name FROM actor WHERE first_name LIKE 'Nick' OR first_name LIKE 'Ed' OR first_name LIKE 'Jennifer';
+
+3 - SELECT * FROM address;
+
+4 - SELECT district , phone FROM address ORDER BY district DESC;
+
+5 - SELECT * FROM actor WHERE actor_id IS NULL;
+
+6 - SELECT * FROM actor WHERE actor_id IS NOT NULL;
+
+7 - SELECT * FROM film WHERE title AND ... IS NOT NULL;
+
+8 - SELECT COUNT(film_id) FROM film;
+
+9 - SELECT SUM (amount) AS sum_amt FROM payment;
+
+10 - SELECT MAX(amount) , MIN(amount) FROM payment;
+
+11 - SELECT MAX(amount) , MIN(amount) , (SUM(amount) / COUNT(amount)) AS average_amount FROM payment;
+
+12 - SELECT SUM(amount) , payment_id FROM payment GROUP BY payment_id ORDER BY payment_id;
+
+13 - SELECT DISTINCT first_name , last_name FROM actor;
+
+14 - SELECT SUM(amount) , payment_id FROM payment GROUP BY payment_id HAVING SUM(amount) > 5.99 ORDER BY payment_id;
+
+15 - SELECT SUM(rental_rate) , DATE_TRUNC('month' , last_update) AS my_month FROM FILM GROUP BY my_month;
+
+16 - SELECT SUM(rental_rate) , DATE_PART('dow' , last_update) as day_of_the_week FROM film GROUP BY day_of_the_week;
+
+17 - SELECT * , UPPER(city) , LOWER(city) FROM city;
