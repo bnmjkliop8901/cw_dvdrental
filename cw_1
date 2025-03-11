@@ -34,3 +34,10 @@
 
 18 - SELECT address , LEFT(address , POSITION(' ' IN address)-1) as street_number FROM address;
 
+join:
+
+1 - ELECT i.inventory_id , r.rental_id FROM inventory i JOIN rental r ON i.inventory_id = r.inventory_id ORDER BY inventory_id LIMIT 5;
+
+2 - SELECT r.rental_id , r.rental_date , p.payment_id FROM rental r JOIN payment p ON r.rental_id = p.rental_id ORDER BY rental_id LIMIT 10;
+
+3 - SELECT fa.film_id , fc.category_id , f.title , f.rental_rate FROM film_actor fa JOIN film f ON fa.film_id = f.film_id JOIN film_category fc ON f.film_id = fc.film_id LIMIT 5;
