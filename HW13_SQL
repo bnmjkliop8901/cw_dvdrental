@@ -1,1 +1,9 @@
 1 - SELECT f.title , COUNT(f.title) FROM film f JOIN inventory i ON f.film_id = i.film_id JOIN rental r ON i.inventory_id = r.inventory_id GROUP BY f.title ORDER BY COUNT(title)  DESC LIMIT 5;
+
+2 - SELECT s.store_id , SUM(p.amount) FROM store s JOIN customer c ON s.store_id = c.store_id JOIN payment p ON c.customer_id = p.customer_id GROUP BY s.store_id;
+
+3 - SELECT c.first_name , p.amount FROM customer c JOIN payment p ON c.customer_id = p.customer_id ORDER BY amount DESC LIMIT 10;
+
+4 - SELECT c.customer_id , c.first_name FROM customer c LEFT JOIN rental r ON c.customer_id = r.customer_id WHERE r.rental_id IS NULL;
+
+5 - SELECT a.actor_id , a.first_name , a.last_name,COUNT(a.actor_id) FROM actor a JOIN film_actor fa ON a.actor_id = fa.actor_id GROUP BY a.actor_id , a.first_name , a.last_name ORDER BY a.actor_id;
